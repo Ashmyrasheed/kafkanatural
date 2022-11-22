@@ -17,9 +17,9 @@ producer=KafkaProducer()
 
 
 def  senddata():
-    data=random.randint(0,1000)
+    random_number=random.randint(0,1000)
 
-    message=producer.send(topic,bytes(str(data),"utf8"))
+    message=producer.send(topic,bytes(str(random_number),"utf8"))
 
     metadata=message.get()
 
